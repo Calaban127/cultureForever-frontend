@@ -1,11 +1,12 @@
+const { forwardTo } = require("prisma-binding");
+
 const Query = {
-  //parent = parent schema of gql
-  //cookies etc will be found in ctx
-  dogs(parent, args, ctx, info) {
-    //return [{ name: "Snickers" }, { name: "Sunny" }];
-    global.dogs = global.dogs || [];
-    return global.dogs;
-  }
+  items: forwardTo("db")
+  // async items(parent, args, ctx, info) {
+  //   console.log('Getting Items!!');
+  //   const items = await ctx.db.query.items();
+  //   return items;
+  // },
 };
 
 module.exports = Query;

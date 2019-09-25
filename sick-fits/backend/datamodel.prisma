@@ -1,6 +1,8 @@
 
-##this is our datamodel for prisma and the data
-##that lives underneath prisma
+#this is our datamodel for prisma and the data
+#that lives underneath prisma
+
+
 
 
 type User {
@@ -16,7 +18,7 @@ type Item {
   image: String
   largeImage: String
   price: Int!
-  createdAt: DateTime! @createdAt
-  updatedAt: DateTime! @updatedAt
-  #  user: User!
+  # createAt: DateTime!
+  # updatedAt: DateTime!
+  # user: User!
 }
